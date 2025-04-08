@@ -5,6 +5,7 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
 ## Table of contents
 
 - [Overview](#overview)
+
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
@@ -26,7 +27,7 @@ Users should be able to:
 
 My solution screenshot
 
-[result/result.png]
+![result.png](result/result.png)
 
 ### Links
 

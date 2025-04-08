@@ -1,0 +1,153 @@
+:root {
+  --yellow: #f4d04e;
+  --black: #111111;
+  --gray-950: #111111;
+  --gray-500: #6b6b6b;
+  --white: #ffffff;
+  --border-radus: 10px;
+  --border-radius-tag: 4px;
+  --flex-gap: 12px;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+main {
+  display: block;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("fonts/Figtree-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 300 900;
+  font-style: oblique 0 1;
+}
+
+body {
+  position: relative;
+  background-color: var(--yellow);
+  height: 100dvh;
+
+  font-family: "Figtree", sans-serif;
+  font-style: normal;
+  line-height: 150%;
+}
+
+em {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.oblique {
+  font-weight: 400;
+  font-style: oblique;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  border-radius: calc(var(--border-radus) * 2);
+  box-shadow: 8px 8px 0px #000000;
+  padding: 24px;
+  width: clamp(327px, 50%, 384px);
+  max-height: 522px;
+}
+
+.card__img {
+  border-radius: var(--border-radus);
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.card__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--flex-gap);
+}
+
+.card__tag {
+  background-color: var(--yellow);
+  border-radius: var(--border-radius-tag);
+  display: inline;
+  padding: 4px 12px;
+  width: min-content;
+}
+
+.card__tag span {
+  font-weight: 700;
+}
+
+.card__tag span,
+.card__details {
+  color: var(--gray-950);
+}
+
+.card__title {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.card__description {
+  color: var(--gray-500);
+  font-size: 16px;
+}
+
+.card__details,
+.card__description {
+  font-weight: 500;
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  gap: var(--flex-gap);
+  margin-top: 24px;
+}
+
+.card__footer img {
+  width: 32px;
+}
+
+.card__footer span {
+  color: var(--gray-950);
+  font-weight: 900;
+}
+
+.card__tag span,
+.card__details,
+.card__footer span {
+  font-size: 0.875rem;
+}
+
+@media screen and (max-width: 768px) {
+  .card__tag span,
+  .card__details {
+    font-size: 0.75rem;
+  }
+
+  .card__title {
+    font-size: 1.25rem;
+  }
+
+  .card__description {
+    font-size: 0.875rem;
+  }
+}
